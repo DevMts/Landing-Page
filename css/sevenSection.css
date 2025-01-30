@@ -1,0 +1,61 @@
+#sevenSection {
+    margin-top: 4rem;
+    border-radius: 10px;
+    background-color: #1E5AFA;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'item1'
+        'item2'
+        'item3'
+    ;
+    gap: 1rem;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+}
+
+#sevenSection h2 {
+    grid-area: item1;
+    color: #fff;
+    font-size: 3rem;
+}
+
+#sevenSection p {
+    grid-area: item2;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+#sevenSection div {
+    grid-area: item3;
+    width: 100%;
+    height: 100%;
+}
+
+#sevenSection button {
+    width: 55%;
+    height: 4rem;
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 1.1rem;
+    color: #fff;
+    border-radius: 10px;
+}
+
+@media (width > 1024px) {
+    #sevenSection {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 4rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "item1 item3"
+            "item2 item3";
+        padding-left: 4rem;
+    }
+
+    #sevenSection div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

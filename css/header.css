@@ -1,0 +1,310 @@
+:root {
+    --color-principal: #1E5AFA;
+    --color-secundario: #F7F7F7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw !important;
+}
+
+header {
+    background-color: var(--color-principal);
+    height: 60vh;
+    position: relative;
+    z-index: 40;
+}
+
+.elipse {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.elipse.index {
+    display: none;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.headerMain.none {
+    display: none;
+}
+
+.btnMenu {
+    cursor: pointer;
+    z-index: 1000;
+    display: block;
+}
+
+.menuHamburguer {
+    width: 35px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.menuHamburguer::before,
+.menuHamburguer::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    transition: 0.3s ease-in-out;
+}
+
+.menuHamburguer::before {
+    top: -10px;
+}
+
+.menuHamburguer::after {
+    top: 10px;
+}
+
+.menuHamburguer.ativo {
+    background-color: transparent;
+}
+
+.menuHamburguer.ativo::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menuHamburguer.ativo::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.tittleMenu {
+    font-size: 2.2rem;
+    color: var(--color-secundario);
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10rem;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    background-color: var(--color-principal);
+    /* transition: 1s ease-in-out; */
+}
+
+.pagesMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.textMenu {
+    padding: 0.4rem 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    color: var(--color-secundario);
+    font-weight: 500;
+    width: 90%;
+    /* border: 1px outset; */
+}
+
+.textMenu:hover {
+    background-color: var(--color-secundario);
+    color: #000;
+    border-radius: 9px;
+}
+
+.linksMenu {
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.menu.off {
+    position: relative;
+    top: 500px;
+    transition: 1s;
+    display: none;
+}
+
+
+.titleHeaderMain {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--color-secundario);
+}
+
+.descriptionHeaderMain {
+    color: var(--color-secundario);
+    padding-top: 2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.figureHeaderMain {
+    position: relative;
+    padding-top: 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.figureHeaderMain img {
+    width: 100%;
+}
+
+.menuDesktop,
+.AccountDesktop {
+    display: none;
+}
+
+.linksMenuDesktop {
+    display: none;
+}
+
+
+@media (width > 1024px) {
+
+    header {
+        height: 100vh;
+    }
+
+    header nav {
+        justify-content: space-around;
+    }
+
+    .titleHeaderMain {
+        margin-top: 3rem;
+    }
+
+    .descriptionHeaderMain {
+        width: 50%;
+    }
+
+    .menuDesktop {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .menuDesktop .textMenuDesktop {
+        color: var(--color-secundario);
+    }
+
+    .AccountDesktop {
+        color: var(--color-secundario);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .Sign {
+        background-color: var(--color-secundario);
+        padding: 1rem;
+        width: 8rem;
+        text-align: center;
+        color: #000;
+        border-radius: 5px;
+
+    }
+
+    .btnMenu {
+        display: none;
+    }
+
+    .linha {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+
+    }
+
+    .linha div {
+        position: relative;
+        height: 100vh;
+        width: 0.5px;
+        background-color: var(--color-secundario);
+        opacity: 40%;
+        z-index: 10;
+    }
+
+    .linksMenuDesktop {
+        position: relative;
+        float: left;
+        bottom: -55vh;
+        left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: var(--color-secundario);
+    }
+}
+
+@media (width < 380px)and (width > 339px) {
+    .titleHeaderMain{
+        font-size: 3rem;
+    }
+}
+
+@media (width < 340px) {
+
+
+    .pagesMenu {
+        gap: 1rem;
+    }
+
+    .textMenu {
+        font-size: 1rem;
+    }
+
+    .titleHeaderMain {
+        font-size: 2rem;
+    }
+}
+
+@media (width < 391px) {
+    header {
+        height: 70vh;
+    }
+}
+
+@media (width < 376px) {
+    header {
+        height: 80vh;
+    }
+}

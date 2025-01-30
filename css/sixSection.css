@@ -1,0 +1,173 @@
+#sixSection {
+    width: 95%;
+    margin: 4rem auto;
+    margin-top: 4rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    /* border: 1px solid red; */
+}
+
+#sixSection h2 {
+    font-size: 3rem;
+    text-align: start;
+    width: 100%;
+}
+
+#sixSection p {
+    color: gray;
+    font-size: 1.25rem;
+}
+
+#sixSection div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+#sixSection div figure,
+#sixSection div img {
+    width: 100%;
+}
+
+@media (width > 630px) {
+    #sixSection {
+        display: grid;
+        grid-template-columns: repeat(2 1fr);
+        grid-template-areas:
+            "item1 item2"
+            "item3 item2"
+            "item4 item2"
+        ;
+        /* margin-left: 3rem;
+        margin-right: 3rem; */
+    }
+
+    #sixSection h2 {
+        grid-area: item1;
+        width: 50%;
+        display: flex;
+        height: 70%;
+        align-items: flex-end;
+    }
+
+    #sixSection>figure {
+        grid-area: item2;
+    }
+
+    #sixSection p {
+        grid-area: item3;
+        width: 80%;
+        font: size 1rem;
+
+    }
+
+    #sixSection div {
+        width: 70%;
+        grid-area: item4;
+    }
+
+    #sixcSection div figure {
+        width: 40%;
+    }
+}
+@media (min-width: 1024px) {
+    #sixSection {
+        width: 80%;
+    }
+    #sixSection h2 {
+        grid-area: item1;
+        width: 30%;
+        display: flex;
+        height: 70%;
+        align-items: flex-end;
+        font-size: 3rem;
+        text-align: start;
+        margin-bottom: 1rem;
+    }
+
+    #sixSection > figure {
+        grid-area: item2;
+    }
+
+    #sixSection p {
+        grid-area: item3;
+        width: 50%;
+        font-size: 1.25rem;
+        color: gray;
+        margin-bottom: 2rem;
+    }
+
+    #sixSection div {
+        width: 40%;
+        grid-area: item4;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    #sixSection div figure,
+    #sixSection div img {
+        width: 100%;
+    }
+
+    #sixSection div figure {
+        margin-top: 4rem;
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 630px) {
+    #sixSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item2"
+            "item3 item2"
+            "item4 item2";
+        /* margin-left: 8rem; */
+        /* margin-right: 3rem; */
+    }
+
+    #sixSection h2 {
+        grid-area: item1;
+        width: 50%;
+        display: flex;
+        height: 70%;
+        align-items: flex-end;
+    }
+
+    #sixSection > figure {
+        grid-area: item2;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: center;
+    }
+
+    #sixSection p {
+        grid-area: item3;
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    #sixSection div {
+        width: 85%;
+        grid-area: item4;
+    }
+
+    #sixSection div figure {
+        width: 100%;
+    }
+}

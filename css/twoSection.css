@@ -1,0 +1,92 @@
+#twoSection {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#twoSection>h2 {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.cardServices {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cardServices figure {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.cardServices img {
+    width: 80%;
+}
+
+.cardServices h3 {
+    font-size: 3rem;
+}
+
+.cardServices p {
+    text-align: justify;
+    font-size: 1.25rem;
+    color: gray;
+}
+
+.cardServices button {
+    width: 40%;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: var(--color);
+    color: var(--fundo);
+    border-radius: 5px;
+}
+.askFeedback{
+    color: gray;
+}
+
+@media (width >630px) {
+    .cardServices {
+        flex-direction: row;
+    }
+
+    .cardServices div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .cardServices div p {
+        width: 60%;
+        text-align: left;
+    }
+
+    .cardServices.meio {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .cardServices.meio div {
+        margin-left: 10rem;
+
+
+    }
+}
+@media (width > 630px) and (width < 1024px) {
+    .cardServices div{
+        width: 60%;
+    }
+    .cardServices div p {
+        width: 80%;
+    }
+    .cardServices.meio div{
+        margin-left: 5rem;
+    }
+}
